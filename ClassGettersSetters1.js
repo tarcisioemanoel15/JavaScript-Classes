@@ -1,4 +1,4 @@
-/* Getters e Setters
+/* Getters e Setters*/
 const _velocidade = Symbol('velocidade');
 
 class Carro {
@@ -32,30 +32,3 @@ const c1 = new Carro('fusca');
 c1.velocidade = 10;
 // c1.acelera()
 console.log(c1);
-*/
-
-
-
-//Valida CPF
-
-class Validacpf{
-    constructor(enviocpf){
-    Object.defineProperty(this, 'cpfLimpo', {
-        get fnction(){
-            return enviocpf.replace(/\D+/g, '');
-        }
-        
-
-    })    
-    }
-    
-    
-
-}
-
-const cpf = new Validacpf('111.111.111-11');
-console.log(cpf);
-
-
-
-
