@@ -10,15 +10,12 @@ class Validacpf {
         return sequencia === this.cpflimpo;
     }
 
-
     valida() {
         if (typeof this.cpflimpo !== "string") return false;
         if (this.cpflimpo.length !== 11) return false;
         if (this.isSequencis()) return false;
         this.criaDigito();
-
         return this.novocpf === this.cpflimpo;
-
     }
 
     criaDigito() {
@@ -40,17 +37,5 @@ class Validacpf {
 
         const digito = 11 - (tot % 11);
         return digito <= 9 ? String(digito) : '0';
-
     }
-
 }
-
-const cpf = new Validacpf('211.111.111-20');
-// console.log(cpf.valida());
-/*
-if (cpf.valida()) {
-    console.log('vvvvvvv')
-} else {
-    console.log('iiiiiiiiii')
-}
-*/
