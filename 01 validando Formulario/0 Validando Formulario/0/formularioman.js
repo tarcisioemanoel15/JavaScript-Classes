@@ -85,7 +85,7 @@ class ValidaFormulario{
     const repetirSenha = this.formu.querySelector('.repetir-senha');
     
     if(senha.value.length < 3 && repetirSenha.value.length > 6 ){
-      this.errorText(senha, 'xxxxxxxxxxxxx');
+      this.errorText(senha, 'campo senha tem que tar entre 3 e 6 ');
       validao = false;
     }
     
@@ -98,4 +98,4 @@ class ValidaFormulario{
   }
 }
 
-const validao = new ValidaFormulario();
+const validao = new ValidaFormulario(); 
